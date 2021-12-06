@@ -1,4 +1,8 @@
 trigger:
+- task: NodeAndNpmTool@1
+  inputs:
+    versionSpec: '10.x'
+    checkLatest: true
 - '*'
 
 pool:
