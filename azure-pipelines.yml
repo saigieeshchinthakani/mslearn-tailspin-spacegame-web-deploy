@@ -1,8 +1,4 @@
 trigger:
-- task: NodeAndNpmTool@1
-  inputs:
-    versionSpec: '10.x'
-    checkLatest: true
 - '*'
 
 pool:
@@ -21,6 +17,10 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
+- task: NodeAndNpmTool@1
+  inputs:
+    versionSpec: '10.x'
+    checkLatest: true
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
